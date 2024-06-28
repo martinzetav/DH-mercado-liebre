@@ -2,9 +2,11 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 app.use(express.static("public"));
 
-app.listen(3000, err =>{
+app.listen(port, err =>{
     err
     ? console.log("Error al levantar el servidor")
     : console.log("Servidor corriendo en el puerto 3000");
